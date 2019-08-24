@@ -1,12 +1,11 @@
 /* CS50 Java Week 2 Assignment
-Basic E-commerce system with console I/O
+Basic E-commerce system without ArrayList console I/O
 */
 
 import java.util.Scanner;
 
 public class ecommerce{
     public static void main(String[] args) {
-
         //List of selling items
         String[] itemNames = new String[]{"T-shirts","Pants","Shirts","Caps","Jeans"}; 
         //List of prices of all selling items
