@@ -115,6 +115,8 @@ class ecom{
 
         return choice;
 
+        inp.close();
+
 
     }
 
