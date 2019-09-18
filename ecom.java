@@ -113,9 +113,10 @@ class ecom{
         System.out.print("Enter your choice: ");
         int choice = inp.nextInt();
 
+        inp.close();
         return choice;
 
-        inp.close();
+        
 
 
     }
