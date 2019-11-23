@@ -1,4 +1,4 @@
-#Write a program (in any language of your choice) to pretty format a sentence.
+# Write a program (in any language of your choice) to pretty format a sentence.
 
 paragraph = input('Enter a paragraph: ').lower()
 
