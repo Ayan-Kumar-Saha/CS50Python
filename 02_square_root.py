@@ -1,10 +1,12 @@
 # 1. Create a program, in any language of your choice, to calculate the square root of a number. You may include calculating square root of a negative number as well, if you wish to. Needless to say, do not use any library functions / methods!
 
+import math
+
 def binary_search(number, low, high):
     mid = (low + high) / 2
     new_number = mid * mid
 
-    if new_number == number and abs(new_number - number) < 0.0001:
+    if new_number == number or abs(new_number - number) < 0.0001:
         return mid
     elif new_number > number:
         return binary_search(number, low, mid)
@@ -12,7 +14,7 @@ def binary_search(number, low, high):
         return binary_search(number, mid, high)
 
 def find_sqrt(number):
-    num = 0
+    num = 1
     while True:
         if num * num == number:
             return num

@@ -18,21 +18,28 @@ def evaluate(t):
     term3 = cube(6 * square(t)) # (6t^2)^3
     return term1 - term2 - term3
 
-# Main Menu
-print('1. Add')
-print('2. Multiply')
-print('3. Evaluate')
-choice = int(input('Enter your choice: '))
+flag = True
 
-if choice in (1,2):
-    print('Enter three numbers: ')
-    numbers = [int(input()) for i in range(3)]
-    num1, num2, num3 = numbers
-    if choice == 1:
-        print("Result of summation: %d" % add(num1, num2, num3))
+while flag:
+    # Main Menu
+    print('\n1. Add')
+    print('2. Multiply')
+    print('3. Evaluate')
+    print('0. Exit')
+    choice = int(input('Enter your choice: '))
+
+    if choice in (1,2):
+        print('Enter three numbers: ')
+        numbers = [int(input()) for i in range(3)]
+        num1, num2, num3 = numbers
+        if choice == 1:
+            print("Result of summation: %d" % add(num1, num2, num3))
+        else:
+            print("Result of multiplication: %d" % multiply(num1, num2, num3))
+    elif choice == 3:
+        t = int(input('Enter the value of t: '))
+        print("Result of evaluation: %d" % evaluate(t))
+    elif choice == 0:
+        flag = False
     else:
-         print("Result of multiplication: %d" % multiply(num1, num2, num3))
-else:
-    t = int(input('Enter the value of t: '))
-    print("Result of evaluation: %d" % evaluate(t))
-    
+        print("Wrong selection! Choose correct one !")
